@@ -5,21 +5,39 @@
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    padding-top: 20px;
+    background-color: #F7F7F7;
 
     // Positioning context for the mobile navigation icon
     position: relative;
-}
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
+    .mlh-logo {
+        background-image: url('../img/mlh_logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        float: left;
 
-    &,
-    &:visited {
-        color: $grey-color-dark;
+        @include media-query($on-palm) {
+            float: none;
+        }
+    }
+
+    .mlh-logo > img {
+        opacity: 0;
+    }
+
+    .site-title {
+        padding-top: 2px;
+        float: right;
+        font-size: 26px;
+
+        @include media-query($on-palm) {
+            padding-top: 5px;
+            font-size: 18px;
+            display: block;
+            float: left;
+        }
     }
 }
 
@@ -188,6 +206,14 @@
     font-size: 24px;
 }
 
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-weight: bold;
+}
 
 
 /**
